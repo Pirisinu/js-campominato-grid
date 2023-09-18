@@ -14,12 +14,12 @@
 const squareContainer = document.querySelector('.container');
 const difficultyChoice = document.querySelector('.difficulty-choice');
 reset()
-//FUNZIONI GENERALI
-
+/* FUNZIONI GENERALI */
 //INIT FUNCTION
 function init(){
 
 }
+
 //BTN START FUNCTION
 function btnStart(){
   //creiamo il bottone in html
@@ -29,13 +29,16 @@ function btnStart(){
 
  return btn;
 }
+
 //RANDOM NUM GENERATOR FUNCTION
-function randomNum(){
-
+function randomNum(min, max){
+ return Math.floor(Math.random() * (max - min +1) + min);
 }
-//EVEN CONTROLL FUNCTION
-function evenControll(){
 
+//EVEN CONTROLL FUNCTION
+function evenControl(xNum){
+  if(!(xNum % 2 == 0)) return 'even';
+  return 'odd';
 }
 //ELEMENT GENERATOR FUNCTION
 function createElement(){
