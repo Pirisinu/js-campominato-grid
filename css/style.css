@@ -36,6 +36,9 @@
   text-align: center;
   height: 50px;
 }
+.d-none{
+  display: none;
+}
 .square{
   border: 1px solid white;
 }
