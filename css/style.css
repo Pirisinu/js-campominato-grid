@@ -53,6 +53,13 @@
 .square.clicked span{
   display: block;
 }
+
+.square.even{
+  background-color: chocolate;
+}
+.square.odd{
+  background-color: rgb(206, 190, 169);
+}
 .square.easy{
   width: calc(100% / 10);
 }
