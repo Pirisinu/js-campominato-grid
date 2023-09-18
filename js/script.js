@@ -23,11 +23,16 @@ function init(){
 //BTN START FUNCTION
 function btnStart(){
   //creiamo il bottone in html
- const btn = document.createElement('button');
- //ci scrivo sopra
- btn.innerHTML= 'Start';
+  const btn = document.createElement('button');
+  //ci scrivo sopra
+  btn.innerHTML= 'Start';
+  //Aggiungo un evento al click per far iniziare il gioco
+  btn.addEventListener('click', function(){
+    difficultyChoice.classList.add('d-none');
+    btn.classList.add('d-none');
+  });
 
- return btn;
+  return btn;
 }
 
 //RANDOM NUM GENERATOR FUNCTION
@@ -42,7 +47,8 @@ function evenControl(xNum){
 }
 //ELEMENT GENERATOR FUNCTION
 function createElement(){
-
+  const square = document.createElement('div');
+  square.className('.square');
 }
 //RESET FUNCTION
 function reset(){
