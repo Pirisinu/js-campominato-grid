@@ -21,6 +21,7 @@ function init(){
   for (let i = 1; i <= 100; i++) {
     const square = createBox(i);
     console.log(square)
+    squareContainer.append(square);
   }
 
 }
@@ -35,6 +36,7 @@ function btnStart(){
   btn.addEventListener('click', function(){
     difficultyChoice.classList.add('d-none');
     btn.classList.add('d-none');
+    init();
   });
 
   return btn;
@@ -62,5 +64,4 @@ function reset(){
   const initButton = btnStart();
   squareContainer.append(initButton)
   difficultyChoice.classList.remove('d-none');
-  init();
 }
