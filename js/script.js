@@ -21,10 +21,10 @@ function init(){
   for (let i = 1; i <= 100; i++) {
 
     const square = createBox(i);
-    console.log(square.id)
     square.addEventListener('click', function(){
+      console.log(square.id)
       this.classList.toggle('clicked');
-      if(evenControl(square.id)){
+      if(evenControl(square.id)=== 'even'){
         this.classList.toggle('even');
       }else{
         this.classList.toggle('odd');
