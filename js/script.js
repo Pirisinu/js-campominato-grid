@@ -19,7 +19,8 @@ reset()
 function init(){
 
   for (let i = 1; i <= 100; i++) {
-    const square = createBox();
+    const square = createBox(i);
+    console.log(square)
   }
 
 }
@@ -52,7 +53,8 @@ function evenControl(xNum){
 //ELEMENT GENERATOR FUNCTION
 function createBox(){
   const square = document.createElement('div');
-  square.classList.add('.square', '.easy');
+  square.classList.add('square', 'easy');
+  return square;
 }
 //RESET FUNCTION
 function reset(){
