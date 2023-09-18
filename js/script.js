@@ -18,6 +18,10 @@ reset()
 //INIT FUNCTION
 function init(){
 
+  for (let i = 1; i <= 100; i++) {
+    const square = createBox();
+  }
+
 }
 
 //BTN START FUNCTION
@@ -46,9 +50,9 @@ function evenControl(xNum){
   return 'odd';
 }
 //ELEMENT GENERATOR FUNCTION
-function createElement(){
+function createBox(){
   const square = document.createElement('div');
-  square.className('.square');
+  square.classList.add('.square', '.easy');
 }
 //RESET FUNCTION
 function reset(){
@@ -56,4 +60,5 @@ function reset(){
   const initButton = btnStart();
   squareContainer.append(initButton)
   difficultyChoice.classList.remove('d-none');
+  init();
 }
