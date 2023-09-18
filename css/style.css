@@ -9,6 +9,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.wrapper-box button{
+  width: 100%;
+  border: none;
+  font-size: 50px;
 }
 .container{
   background-color: blueviolet;
@@ -17,7 +23,28 @@
   display: flex;
   flex-wrap: wrap;
 }
+.difficulty-choice{
+  background-color:crimson;
+  height: 650px;
+  width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.difficulty-choice select{
+  text-align: center;
+  height: 50px;
+}
 .square{
-  width: calc(100% / 10);
   border: 1px solid white;
+}
+.square.easy{
+  width: calc(100% / 10);
+}
+.square.mid{
+  width: calc(100% / 9);
+}
+.square.hard{
+  width: calc(100% / 8);
 }
