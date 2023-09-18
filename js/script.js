@@ -19,8 +19,13 @@ reset()
 function init(){
 
   for (let i = 1; i <= 100; i++) {
+
     const square = createBox(i);
-    console.log(square)
+    
+    square.addEventListener('click', function(){
+      this.classList.toggle('clicked');
+
+    });
     squareContainer.append(square);
   }
 
@@ -35,7 +40,7 @@ function btnStart(){
   //Aggiungo un evento al click per far iniziare il gioco
   btn.addEventListener('click', function(){
     difficultyChoice.classList.add('d-none');
-    btn.classList.add('d-none');
+    this.classList.add('d-none');
     init();
   });
 
@@ -53,9 +58,12 @@ function evenControl(xNum){
   return 'odd';
 }
 //ELEMENT GENERATOR FUNCTION
-function createBox(){
+function createBox(index){
   const square = document.createElement('div');
   square.classList.add('square', 'easy');
+  square.innerHTML = `<span>${index}</span>`;
+  square.id = index;
+
   return square;
 }
 //RESET FUNCTION

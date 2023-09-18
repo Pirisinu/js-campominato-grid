@@ -41,6 +41,17 @@
 }
 .square{
   border: 1px solid white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+}
+.square span{
+  display: none;
+}
+.square.clicked span{
+  display: block;
 }
 .square.easy{
   width: calc(100% / 10);
